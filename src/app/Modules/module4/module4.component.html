@@ -1,0 +1,95 @@
+<!-- <p>module4 works!</p> -->
+
+<div class="outer-div mt-3" style="background-color: #f0f0f0; padding: 20px; width: 88%; margin: auto;">
+    <!-- <h3 style="font-weight: bold;">New Property Valuation</h3> -->
+    <div class="container mt-5 inner-div">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="custom-div">
+                    <form class="row g-3">
+                        <!-- <div class="row-md-12"> -->
+                        <div class="col-md-12">
+                            <h4 style="font-weight: bold;">Borrower's Details</h4>
+                        </div>
+                        <div class="col-md-12">
+                            <h6 style="font-weight: bold;">Main Borrower</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="customernumber" class="form-label">Customer number</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i> 
+                                </span>
+                                <input type="text" class="form-control" id="customernumber" placeholder="CIR">
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            <label for="customername" class="form-label">Customer name</label>
+                            <input type="text" class="form-control" id="customername">
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            <label for="address" class="form-label">Address</label>
+                            <!-- Adjusted address field to be displayed in two rows -->
+                            <textarea class="form-control" id="address" rows="2"></textarea>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="contactno" class="form-label">Contact No.</label>
+                            <input type="text" class="form-control" id="contactno">
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <!-- </div> -->
+
+                        <div  *ngFor="let borrower of jointBorrowers; let i = index">
+                            <h6 style="font-weight: bold;">Joint Borrower - #{{ i + 1 }}</h6>
+                            <div class="row">
+                            <div class="col-md-3">
+                                <label for="joint-customernumber-{{i}}" class="form-label">Customer number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-search"></i> 
+                                    </span>
+                                    <input type="text" class="form-control" id="joint-customernumber-{{i}}" placeholder="CIR">
+                                </div>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-3">
+                                <label for="joint-customername-{{i}}" class="form-label">Customer name</label>
+                                <input type="text" class="form-control" id="joint-customername-{{i}}">
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-3">
+                                <label for="joint-address-{{i}}" class="form-label">Address</label>
+                                <textarea class="form-control" id="joint-address-{{i}}" rows="2"></textarea>
+                            </div>
+                            <div class="col-md-1" style="margin-top:2rem;">  <button class="btn btn-outline-danger" type="button" (click)="deleteJointBorrower(i)">
+                                <i class="bi bi-trash"></i>
+                            </button></div>
+                            <div class="col-md-3">
+                                <label for="joint-contactno-{{i}}" class="form-label">Contact No.</label>
+                                <input type="text" class="form-control" id="joint-contactno-{{i}}">
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-3">
+                                <label for="joint-email-{{i}}" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="joint-email-{{i}}">
+                            </div>
+                            
+                        </div>
+                        </div>
+
+                        <!-- Add Joint Borrower button -->
+                        <div class="col-md-12 mt-3">
+                            <button type="button" class="btn btn-primary" (click)="addJointBorrower()">Add Joint Borrower</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<!-- <p>initiator-details works!</p> -->
+<nav class="navbar navbar-light bg-primary fixed-top">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1 text-white text-center mx-auto fw-bold fs-3">Bank Property Evaluation Application</span>
+  </div>
+</nav>
+<div style="margin-top: 5rem;">
+  <div [hidden]="activetab!='module1'">
+    <app-module1></app-module1>
+  </div>
+  <div [hidden]="activetab!='module2'">
+    <app-module2></app-module2>
+  </div>
+  <div [hidden]="activetab!='module3'">
+    <app-module3></app-module3>
+  </div>
+  <div [hidden]="activetab!='module4'">
+    <app-module4></app-module4>
+  </div>
+  <div [hidden]="activetab!='module5'">
+    <app-module5></app-module5>
+  </div>
+</div>
+
+   
+ 
+     <!-- Right arrow icon -->
+     <i class="bi bi-arrow-right-circle text-primary" style="font-size: 3rem; cursor:pointer; position:absolute; right:0" (click)="goToNextPage()"></i>
+
+      <!-- Left arrow icon -->
+      <i class="bi bi-arrow-left-circle text-primary" style="font-size: 3rem; cursor:pointer; position:absolute; left:0" (click)="goToPreviousPage()"></i>
+
+   
+
+
+
+  

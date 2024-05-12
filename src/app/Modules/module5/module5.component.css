@@ -1,0 +1,31 @@
+.table-wrapper {
+    height: 175px; /* Set the height of the table wrapper */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table-wrapper1 {
+    height: 240px; /* Set the height of the table wrapper */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f0f0f0; 
+    z-index: 1;
+}
+
+.drop-box {
+    border: 2px solid #cccccc;
+    padding: 20px;
+    cursor: pointer;
+  }
+  
+  .drop-box:hover {
+    border-color: #aaaaaa;
+  }
+
+  .btn-black {
+    background-color: black;
+  }
+  

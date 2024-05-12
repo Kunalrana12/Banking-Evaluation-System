@@ -1,0 +1,191 @@
+<div class="outer-div mt-3" style="background-color: #f0f0f0; padding: 20px; width:88%; margin:auto">
+    <div class="container mt-5 inner-div">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="custom-div">
+                    <form class="row g-3">
+                        <div class="col-md-12">
+                            <label for="comments" class="form-label" style="font-weight: 600;">Comments</label>
+                            <textarea class="form-control" id="comments" rows="2"></textarea>
+                        </div>
+                        <div class="col-md-12" style="overflow-x: auto;">
+                            <label for="previouscomments" class="form-label" style="font-weight: 600;">Previous comments</label>
+                            <div class="table-wrapper">
+                                <table class="table table-bordered" style="background-color: white;">
+                                    <thead style="background-color: white;">
+                                        <tr>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">User</th>
+                                            <th scope="col">Comments</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="outer-div mt-3" style="background-color: #f0f0f0; padding: 20px; width:88%; margin:auto">
+    <div class="container mt-1 inner-div">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="custom-div">
+                    <form class="row g-3">
+                        <div class="col-md-12">
+                            <h6 style="font-weight: bold;">Upload Section</h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="documenttype" class="form-label">Document type</label>
+                                <select class="form-select" id="documenttype">
+                                    <option value="Title Deed">Title Deed</option>
+                                    <option value="National Identity Card">National Identity Card</option>
+                                    <option value="Building Permits">Building Permits</option>
+                                    <option value="Birth Certificate">Birth Certificate</option>
+                                    <option value="Marriage Certificate">Marriage Certificate</option>
+                                    <option value="Quotation">Quotation</option>
+                                    <option value="Letter of Intent">Letter of Intent</option>
+                                  </select>   
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-md-14  mt-5">
+                                        <div class="drop-box text-center" (drop)="onFileDrop($event)" (dragover)="onDragOver($event)">
+                                          <i class="bi bi-file-pdf fs-2 mb-2"></i>
+                                          <p class="mb-0">Drag and drop files here or</p>
+                                          <label for="fileInput" class="btn btn-black mt-2 mb-0" style="color: #f0f0f0;">Browse</label>
+                                          <input id="fileInput" type="file" (change)="onFileSelected($event)" style="display: none" accept=".pdf,.xlsx"><br>
+                                          <small class="text-muted">Maximum size: 5MB | Allowed formats: XLSX, PDF</small>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>     
+                            </div>
+                           
+                            <div class="col-md-1">
+
+                            </div>
+                            <div class="col-md-7">
+                                <label for="uploaddocuments" class="form-label" style="font-weight: 600;">Uploaded Documents</label>
+                            <div class="table-wrapper1">
+                                <table class="table table-bordered" style="background-color: white;">
+                                    <thead style="background-color: white;">
+                                        <tr>
+                                            <th scope="col">Doc Type</th>
+                                            <th scope="col">Filename</th>
+                                            <th scope="col">Size</th>
+                                            <th scope="col">Uploaded by</th>
+                                            <th scope="col">Uploaded on</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Deed Charge</td>
+                                            <td>my first file.pdf</td>
+                                            <td>2MB</td>
+                                            <td>USER001</td>
+                                            <td>12/12/2023 14:15</td>
+                                            <td><i class="bi bi-download"></i></td>
+                                            <td><i class="bi bi-trash text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deed Charge</td>
+                                            <td>my first file.pdf</td>
+                                            <td>2MB</td>
+                                            <td>USER001</td>
+                                            <td>12/12/2023 14:15</td>
+                                            <td><i class="bi bi-download"></i></td>
+                                            <td><i class="bi bi-trash text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deed Charge</td>
+                                            <td>my first file.pdf</td>
+                                            <td>2MB</td>
+                                            <td>USER001</td>
+                                            <td>12/12/2023 14:15</td>
+                                            <td><i class="bi bi-download"></i></td>
+                                            <td><i class="bi bi-trash text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deed Charge</td>
+                                            <td>my first file.pdf</td>
+                                            <td>2MB</td>
+                                            <td>USER001</td>
+                                            <td>12/12/2023 14:15</td>
+                                            <td><i class="bi bi-download"></i></td>
+                                            <td><i class="bi bi-trash text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deed Charge</td>
+                                            <td>my first file.pdf</td>
+                                            <td>2MB</td>
+                                            <td>USER001</td>
+                                            <td>12/12/2023 14:15</td>
+                                            <td><i class="bi bi-download"></i></td>
+                                            <td><i class="bi bi-trash text-danger"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deed Charge</td>
+                                            <td>my first file.pdf</td>
+                                            <td>2MB</td>
+                                            <td>USER001</td>
+                                            <td>12/12/2023 14:15</td>
+                                            <td><i class="bi bi-download"></i></td>
+                                            <td><i class="bi bi-trash text-danger"></i></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
